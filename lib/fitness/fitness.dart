@@ -175,7 +175,11 @@ class Fitness extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(bottom: 20.0, left: 30.0, right: 30.0),
+        padding: const EdgeInsets.only(
+          bottom: 30.0,
+          left: 30.0,
+          right: 30.0,
+        ),
         child: Container(
           child: ClipRRect(
             borderRadius: BorderRadius.only(
@@ -189,32 +193,46 @@ class Fitness extends StatelessWidget {
               showUnselectedLabels: false,
               backgroundColor: GREY_CARD,
               type: BottomNavigationBarType.fixed,
-              items: const <BottomNavigationBarItem>[
+              iconSize: 33.0,
+              selectedFontSize: 0,
+              items: <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.home_outlined,
-                    color: Colors.white,
+                  icon: Container(
+                    padding: const EdgeInsets.only(top: 34.0),
+                    child: Icon(
+                      Icons.home_outlined,
+                      color: Colors.white,
+                    ),
                   ),
                   label: 'Home',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.favorite_outline,
-                    color: Colors.white,
+                  icon: Container(
+                    padding: const EdgeInsets.only(top: 34.0),
+                    child: Icon(
+                      Icons.favorite_outline,
+                      color: Colors.white,
+                    ),
                   ),
                   label: 'Favorites',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.bookmark_outline,
-                    color: Colors.white,
+                  icon: Container(
+                    padding: const EdgeInsets.only(top: 34.0),
+                    child: Icon(
+                      Icons.bookmark_outline,
+                      color: Colors.white,
+                    ),
                   ),
                   label: 'Favorites',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.apps_outlined,
-                    color: Colors.white,
+                  icon: Container(
+                    padding: const EdgeInsets.only(top: 34.0),
+                    child: Icon(
+                      Icons.apps_outlined,
+                      color: Colors.white,
+                    ),
                   ),
                   label: 'Favorites',
                 ),

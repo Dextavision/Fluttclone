@@ -26,53 +26,60 @@ class WorkoutCard extends StatelessWidget {
       margin: const EdgeInsets.only(
         left: 30.0,
         right: 30.0,
-        top: 40.0,
-        bottom: 60.0,
+        top: 30.0,
+        bottom: 35.0,
       ),
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(30.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                workoutText,
-                Row(
-                  children: <Widget>[
-                    minutes,
-                    Container(
-                      padding: const EdgeInsets.all(2.0),
-                      margin: const EdgeInsets.only(left: 10.0, right: 10.0),
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                      ),
+      child: OverflowBox(
+        maxHeight: 300.0,
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  workoutText,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
+                    child: Row(
+                      children: <Widget>[
+                        minutes,
+                        Container(
+                          padding: const EdgeInsets.all(2.0),
+                          margin:
+                              const EdgeInsets.only(left: 10.0, right: 10.0),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                          ),
+                        ),
+                        topic,
+                      ],
                     ),
-                    topic,
-                  ],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(
-                    Icons.arrow_forward_ios_outlined,
-                    color: Colors.white,
-                    size: 17.0,
                   ),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xff393938),
+                  Container(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Colors.white,
+                      size: 17.0,
+                    ),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color(0xff393938),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Image(
-            image: AssetImage(
-              'assets/boxer.png',
+            Image(
+              image: AssetImage(
+                'assets/boxer.png',
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
