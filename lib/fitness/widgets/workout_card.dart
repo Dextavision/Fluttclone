@@ -31,6 +31,7 @@ class WorkoutCard extends StatelessWidget {
       ),
       child: OverflowBox(
         maxHeight: 300.0,
+        maxWidth: 350.0,
         child: Row(
           children: [
             Padding(
@@ -41,14 +42,16 @@ class WorkoutCard extends StatelessWidget {
                 children: <Widget>[
                   workoutText,
                   Padding(
-                    padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
+                    padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
                     child: Row(
                       children: <Widget>[
                         minutes,
                         Container(
                           padding: const EdgeInsets.all(2.0),
-                          margin:
-                              const EdgeInsets.only(left: 10.0, right: 10.0),
+                          margin: const EdgeInsets.only(
+                            left: 10.0,
+                            right: 10.0,
+                          ),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.white,
@@ -63,7 +66,7 @@ class WorkoutCard extends StatelessWidget {
                     child: Icon(
                       Icons.arrow_forward_ios_outlined,
                       color: Colors.white,
-                      size: 17.0,
+                      size: 12.0,
                     ),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
